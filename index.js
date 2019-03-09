@@ -26,6 +26,7 @@ const icon = {
 const text = {'content-type': 'text/html'};
 
 const ASSETS_DIR = __dirname + '/public/assets';
+const PUBLIC_DIR = __dirname + '/public';
 console.log(ASSETS_DIR);
 let files = {};
 const filesList = fs.readdirSync(ASSETS_DIR);
@@ -49,8 +50,8 @@ filesList.forEach(item => {
   files[item] = content;
 });
 
-const indexHtmlHttp = fs.readFileSync('public/indexHttp.html');
-const indexHtml = fs.readFileSync('public/index.html');
+const indexHtmlHttp = fs.readFileSync(PUBLIC_DIR + '/indexHttp.html');
+const indexHtml = fs.readFileSync(PUBLIC_DIR + '/index.html');
 
 const getHeader = function(contentType) {
   return {
