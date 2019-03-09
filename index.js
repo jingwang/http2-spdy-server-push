@@ -86,8 +86,8 @@ app.get('/', (req, res) => {
 });
 
 const options = {
-  key: fs.readFileSync('./localhost.key'),
-  cert: fs.readFileSync('./localhost.crt')
+  key: fs.readFileSync(__dirname + '/localhost.key'),
+  cert: fs.readFileSync(__dirname + '/localhost.crt')
 };
 
 
